@@ -1,0 +1,159 @@
+object View: TView
+  Left = 0
+  Top = 0
+  Caption = 'Header Footer Form'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Header: TToolBar
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object HeaderLabel: TLabel
+      Align = Contents
+      Size.Width = 384.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      object Label1: TLabel
+        Align = Bottom
+        Position.Y = 7.000000000000000000
+        Size.Width = 384.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Label1'
+        TabOrder = 42
+        object CornerButton1: TCornerButton
+          Align = Right
+          Position.X = 304.000000000000000000
+          Sides = [Top, Left, Bottom, Right]
+          Size.Width = 80.000000000000000000
+          Size.Height = 41.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          Text = 'Incluir'
+          TextSettings.Trimming = None
+          XRadius = 3.000000000000000000
+          YRadius = 3.000000000000000000
+          OnClick = CornerButton1Click
+        end
+        object Edit1: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Client
+          TabOrder = 5
+          Size.Width = 304.000000000000000000
+          Size.Height = 41.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+    end
+  end
+  object Footer: TToolBar
+    Align = Bottom
+    Position.Y = 519.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'bottomtoolbar'
+    TabOrder = 1
+    object btDelete: TCornerButton
+      Align = Right
+      Position.X = 64.000000000000000000
+      Sides = [Top, Left, Bottom, Right]
+      Size.Width = 80.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Delete'
+      TextSettings.Trimming = None
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      OnClick = btDeleteClick
+    end
+    object CornerButton2: TCornerButton
+      Align = Right
+      Position.X = 144.000000000000000000
+      Sides = [Top, Left, Bottom, Right]
+      Size.Width = 80.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+      Text = 'Salvar DB'
+      TextSettings.Trimming = None
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      OnClick = CornerButton2Click
+    end
+    object CornerButton3: TCornerButton
+      Align = Right
+      Position.X = 304.000000000000000000
+      Sides = [Top, Left, Bottom, Right]
+      Size.Width = 80.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = 'Sair'
+      TextSettings.Trimming = None
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+    end
+    object CornerButton4: TCornerButton
+      Align = Right
+      Position.X = 224.000000000000000000
+      Sides = [Top, Left, Bottom, Right]
+      Size.Width = 80.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      Text = 'Trazer do DB'
+      TextSettings.Trimming = None
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      OnClick = CornerButton4Click
+    end
+  end
+  object ListViewCompras: TListView
+    ItemAppearanceClassName = 'TListItemRightDetailAppearance'
+    ItemEditAppearanceClassName = 'TListItemRightDetailShowCheckAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    EditMode = True
+    Align = Client
+    Size.Width = 384.000000000000000000
+    Size.Height = 471.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    StyleLookup = 'ListViewComprasStyle1'
+    OnItemClick = ListViewComprasItemClick
+  end
+  object StyleBook1: TStyleBook
+    Styles = <
+      item
+      end>
+    Left = 104
+    Top = 184
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'FMX'
+    Left = 280
+    Top = 377
+  end
+  object ImageList1: TImageList
+    Source = <
+      item
+        MultiResBitmap = <
+          item
+          end>
+        Name = 'Item 0'
+      end>
+    Destination = <>
+    Left = 168
+    Top = 225
+  end
+end

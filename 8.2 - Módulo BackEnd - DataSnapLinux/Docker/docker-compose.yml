@@ -1,0 +1,24 @@
+services:
+  firebird:
+    image: ghcr.io/fdcastel/firebird
+    restart: always
+    environment:
+      - FIREBIRD_ROOT_PASSWORD=masterkey
+      - FIREBIRD_USER=SYSDBA
+      - FIREBIRD_PASSWORD=masterkey
+      - FIREBIRD_DATABASE=PRODUTOS.fdb
+      - FIREBIRD_DATABASE_DEFAULT_CHARSET=UTF8
+    ports:
+      - '3050:3050'  
+    volumes:
+      - ./data:/var/lib/firebird/data
+      
+  servidor:
+    image: kiviancristaldo/servidor
+    # image: kiviancristaldo/paserver
+    restart: always
+    environment:
+      - SERVER=firebird
+    ports:
+      - '8080:8080'  
+      # - '64211:64211'  

@@ -51,3 +51,4 @@ Win64/Release/
 # Outras configurações específicas do desenvolvedor
 *.user
 *.user.cfg
+/8.2 - Módulo BackEnd - DataSnapLinux/Docker/data/*.fdb

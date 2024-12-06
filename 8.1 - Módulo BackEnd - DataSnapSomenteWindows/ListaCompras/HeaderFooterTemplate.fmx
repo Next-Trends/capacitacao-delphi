@@ -1,0 +1,103 @@
+object View: TView
+  Left = 0
+  Top = 0
+  Caption = 'Header Footer Form'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Header: TToolBar
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object HeaderLabel: TLabel
+      Align = Contents
+      Size.Width = 384.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      Text = 'Title'
+      object Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Left
+        TabOrder = 42
+        Size.Width = 273.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Button1: TButton
+        Align = Client
+        Size.Width = 111.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 43
+        Text = 'Adicionar'
+        TextSettings.Trimming = None
+        OnClick = Button1Click
+      end
+    end
+  end
+  object Footer: TToolBar
+    Align = Bottom
+    Position.Y = 519.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'bottomtoolbar'
+    TabOrder = 1
+    object btRemover: TButton
+      Align = Client
+      Size.Width = 207.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Remover Itens Prontos'
+      TextSettings.Trimming = None
+      OnClick = btRemoverClick
+    end
+    object btSalvarBanco: TButton
+      Align = MostLeft
+      Size.Width = 80.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Salvar Banco'
+      TextSettings.Trimming = None
+      OnClick = btSalvarBancoClick
+    end
+    object btTrazerDB: TButton
+      Align = MostLeft
+      Position.X = 80.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Trazer do DB'
+      TextSettings.Trimming = None
+      OnClick = btTrazerDBClick
+    end
+  end
+  object ListView1: TListView
+    ItemAppearanceClassName = 'TListItemRightDetailAppearance'
+    ItemEditAppearanceClassName = 'TListItemRightDetailShowCheckAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    EditMode = True
+    Align = Client
+    Size.Width = 384.000000000000000000
+    Size.Height = 471.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    OnItemClick = ListView1ItemClick
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'FMX'
+    Left = 208
+    Top = 224
+  end
+end
