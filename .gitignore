@@ -1,0 +1,54 @@
+# Arquivos de backup da IDE
+*.~*
+*.#*
+*.bak
+*.old
+
+# Arquivos de compilação
+*.exe
+*.dll
+*.dcu
+*.bpl
+*.dcp
+*.map
+*.csm
+*.dsk
+*.local
+*.tds
+*.res
+*.lib
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+*.o
+*.obj
+*.pch
+
+# Arquivos gerados pela IDE
+__history/
+__recovery/
+*.identcache
+*.tvsconfig
+*.localhistory
+*.groupproj.local
+*.groupproj.cache
+
+# Configurações específicas de IDE
+*.local
+*.rsydsk
+*.cgrp
+*.cgproj
+
+# Outras pastas geradas
+Debug/
+Release/
+Win32/Debug/
+Win32/Release/
+Win64/Debug/
+Win64/Release/
+
+# Outras configurações específicas do desenvolvedor
+*.user
+*.user.cfg
+/8.2 - Módulo BackEnd - DataSnapLinux/Docker/data/*.fdb
